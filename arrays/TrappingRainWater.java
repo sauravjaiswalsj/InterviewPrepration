@@ -4,7 +4,7 @@ public class TrappingRainWater{
 
 		System.out.println(getTrappedWaterFast(arr,5));
 
-        for(int i = 0; i < 5; i ++){
+        for(int i = 0; i < 50; i ++){
             long[] array = StressTest.getLongArray();
             int n = array.length;
             if(getTrappedWater(array, n) == getTrappedWaterFast(array, n)){
