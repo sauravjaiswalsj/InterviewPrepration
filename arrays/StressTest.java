@@ -83,9 +83,47 @@ public class StressTest {
                 break;
             }
         }
+        if(isMatch == false)
+            debugIntArrays(expected, actual);
         return isMatch;
     }
     
+    public static void debugIntArrays(int[] expected, int[] actual){
+        if(expected.length != actual.length){
+            System.out.println("Actual size: "+ actual.length + " is not actual to expected size : " + expected.length);
+        }
+        boolean isMatch = true;
+        for(int i = 0; i < expected.length; i++){
+            if(expected[i] != actual[i]){
+                isMatch = false;
+                break;
+            }
+        }
+        System.out.println();
+        System.out.println(isMatch);
+
+        System.out.println();
+        System.out.println("-----------Debug View---------------");
+        System.out.println();
+        System.out.println("Actual Value: ");
+        for(int i : actual){
+            System.out.printf("%d ",i);
+        }
+        System.out.println();
+
+        System.out.println("Expected: ");
+
+        for(int i : expected){
+            System.out.printf("%d ",i);
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println("-----------Debug View End---------------");
+
+        System.out.println();
+        System.out.println();
+    }
+
     public static boolean matchLongArrays(long[] expected, long[] actual){
         if(expected.length != actual.length){
             System.out.println("Actual size: "+ actual.length + " is not actual to expected size : " + expected.length);

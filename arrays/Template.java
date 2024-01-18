@@ -1,3 +1,12 @@
+//StressTest Class Methods:
+// getIntArray()
+// getIntArray(min, max)
+// getLongArray()
+// matchIntArrays()
+// matchLongArrays()
+// debugIntArrays()
+// display()
+
 public class  {
 	
 	public static void main(String[] args){
@@ -15,7 +24,7 @@ public class  {
 		}
 	}
 
-	public static  (int[] arr, ){
+	public static  (int[] arr){
 		
 	}
 }
