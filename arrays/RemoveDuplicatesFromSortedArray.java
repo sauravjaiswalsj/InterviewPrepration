@@ -38,17 +38,19 @@ import java.util.Arrays;
 public class RemoveDuplicatesFromSortedArray
 {
 	public static void main(String[] args){
-		for(int i = 0; i < 2; i++){
+		for(int i = 0; i < 100; i++){
 
-			int[] arr = StressTest.generateDuplicates(100, 50, 0.4,3);;
+			int[] arr = StressTest.generateDuplicates(1000, 50, 0.8,3);;
 			//int[] arr = {1,1,2,2,3,3};
 			Arrays.sort(arr);
-			StressTest.display(arr);
+			//StressTest.display(arr);
 
 			int expected = brute(arr);
 			int act = better(arr);
-			//int[] actual = optimal(arr);
-			StressTest.compareDebug(expected,act);	
+			int opt = optimal(arr);
+			
+			StressTest.compareDebug(expected,act);
+			StressTest.compareDebug(expected, opt);
 		}
 	}
 
@@ -59,7 +61,7 @@ public class RemoveDuplicatesFromSortedArray
             		set.add(arr[i]);
         	}
 
-        	return set.size();
+		return set.size();
 	}
 
 	public static int better(int[] arr){
@@ -76,12 +78,30 @@ public class RemoveDuplicatesFromSortedArray
 		}
 		int count = 0;
 
-		for(int i = 1; i < hash.length; i++){
-			if(hash[i] == 1)
+		for(int i = 0; i < hash.length; i++){
+			if(hash[i] == 1){	
 				++count;
+			}
 		}
 		//StressTest.display(hash);
 		return count;
+	}
+
+	public static int optimal(int[] arr){
+		// 1 2 2 3 3 
+		// 1 2 3
+		
+		// 1 1 2 2 3 3
+		// 1 2 3 
+		int low = 1; 
+
+		for(int i = 1; i < arr.length; i++){
+			if(arr[i] != arr[i-1]){
+				arr[low] = arr[i];
+				low++;
+			}
+		}
+		return low;
 	}
 }
 

@@ -10,6 +10,7 @@
 // StressTest.debugIntArrays()
 // StressTest.display()
 // StressTest.compare(expected, actual);
+// StressTest.getArray(ArrayList<Integer> list);
 
 public class  
 {
