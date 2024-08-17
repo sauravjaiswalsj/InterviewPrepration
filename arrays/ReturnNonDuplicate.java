@@ -11,6 +11,8 @@
 // StressTest.display()
 // StressTest.compare(expected, actual);
 
+import java.util.ArrayList;
+
 /*
  *
  * You are given a sorted array ‘arr’ of ‘n’ numbers such that every number occurred twice in the array except one, which appears only once.
@@ -27,7 +29,7 @@ Input: 'arr' = [1,1,2,2,4,5,5]
 Output: 4
 
  */
-public class ReturnNon-Duplicate
+public class ReturnNonDuplicate
 {
 	public static void main(String[] args){
 		for(int i = 0; i < 10; i++){

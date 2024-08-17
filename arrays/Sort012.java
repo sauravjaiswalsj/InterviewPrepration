@@ -24,7 +24,7 @@ public class Sort012
 			//int[] actual = optimal(arr);
 	}
 
-	public static  optimized(int[] arr){
+	public static void optimized(int[] arr){
 		int low = 0, mid = 0, high = arr.length -1;
 
 		while(mid <= high){

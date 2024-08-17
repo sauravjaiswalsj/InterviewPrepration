@@ -1,4 +1,4 @@
-// StressTest Class Methods:
+package random;// StressTest Class Methods:
 // Create an array of 100 elements with a maximum value of 50 and 40% probability of duplicates, start value can be null
 // generateDuplicates(int maxSize, int maxValue, double duplicateProbability, Integer startValue)
 // StressTest.generatehDuplicates(100, 50, 0.4);
@@ -15,7 +15,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-public class Codechef-LECANDY
+public class CodechefLECANDY
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{

@@ -10,8 +10,8 @@
 // StressTest.debugIntArrays()
 // StressTest.display()
 // StressTest.compare(expected, actual);
-
-import javafx.util.pair;
+import java.util.*;
+import javafx.util.Pair;
 public class TwoSum
 {
 	public static void main(String[] args){
@@ -53,7 +53,7 @@ public class TwoSum
 
 		return list;
 	}
-	public static optimal(ArrayList<Integer> arr, int target, int n) {
+	public static ArrayList<Pair<Integer, Integer>> optimal(ArrayList<Integer> arr, int target, int n) {
 		// Write your code here.
 		ArrayList<Pair<Integer, Integer>> list = new ArrayList<Pair<Integer, Integer>>();
 		Collections.sort(arr);
@@ -78,8 +78,6 @@ public class TwoSum
 			list.add(new Pair(-1,-1));
 
 		return list;
-	}
-		
 	}
 
 	public static ArrayList<Pair<Integer, Integer>> twoSumN(ArrayList<Integer> arr, int target, int n) {
