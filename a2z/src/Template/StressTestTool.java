@@ -24,7 +24,11 @@ public class StressTestTool {
             return this.code + text;
         }
 
+        public void print(String text){
+            System.out.println(colorize(text));
+        }
     }
+
     // minimum range of random numbers
     private static int lowerBound = 0;
 

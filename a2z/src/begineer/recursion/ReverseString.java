@@ -7,7 +7,7 @@ public class ReverseString {
     public static void main(String[] args){
 
         for (int i = 0; i < 10; i++){
-            check((i * i+1)%2);
+            check(i *1000 +12);
         }
     }
 
