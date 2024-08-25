@@ -17,24 +17,20 @@ The r and t have same occurrences , so we arrange them by alphabetic order.
 
  */
 package begineer.Strings;
-import java.util.Comparator;
-import java.util.HashMap;
-import java .util.List;
-import java.util.Map;
-import java.util.Collections;
-import java.util.Collection;
 import java.util.*;
-import Template.StressTestTool;
 
 class SortedMap implements Comparator<Map.Entry<Character, Integer>>{
     @Override
     public int compare(Map.Entry<Character, Integer> m1, Map.Entry<Character, Integer> m2){
-        return m1.getValue().compareTo(m2.getValue());
+        if (m2.getValue() == m1.getValue()){
+            return m1.getKey().compareTo(m2.getKey());
+        }
+        return m2.getValue().compareTo(m1.getValue());
     }
 }
 public class SortFrequencyMap {
     public static void main(String[] args) {
-        String s = "tree";
+        String s = "bbccddaaa";
 
         List<Character> st = frequencySort(s);
         System.out.println(st);
@@ -47,18 +43,23 @@ public class SortFrequencyMap {
         }
 
         System.out.println();
-        
+
         for (Map.Entry<Character, Integer> entry : map.entrySet()){
             System.out.println("Key = " + entry.getKey() + " Value = " + entry.getValue());
         }
         System.out.println();
+        System.out.println(map.entrySet());
+
         ArrayList<Map.Entry<Character, Integer>> list = new ArrayList<>(map.entrySet());
         SortedMap sortedMap = new SortedMap();
         list.sort(sortedMap);
 
-        Set<Character> ans = map.keySet();
-        System.out.println(map.keySet());
+        ArrayList<Character> map2List = new ArrayList<>();
 
-        return List.copyOf(ans);
+        for (Map.Entry<Character, Integer> entry: list){
+            map2List.add(entry.getKey());
+        }
+
+        return map2List;
     }
 }
